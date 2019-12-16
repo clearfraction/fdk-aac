@@ -33,18 +33,18 @@ developing applications that use %{name}.
 
 
 %prep
-%autosetup -n %{name}-%{version}
+%setup -n %{name}-%{version}
 
 
 %build
-
 libtoolize
 aclocal
 automake --add-missing
 autoreconf
 ./configure --prefix=/usr --libdir=%{_libdir}/fdk-aac-freeworld --includedir=%{_includedir}/fdk-aac-freeworld --enable-shared --disable-static
 # make gcc5/gcc6 happy
-make CXXFLAGS='%{optflags} -std=c++11 -Wno-narrowing' V=1 %{?_smp_mflags}
+make 
+# CXXFLAGS='%{optflags} -std=c++11 -Wno-narrowing' V=1 %{?_smp_mflags}
 
 
 
