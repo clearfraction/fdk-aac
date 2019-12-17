@@ -38,12 +38,12 @@ autoreconf -vif
 
 %make_build
 
-
 %install
 %make_install INSTALL="install"
 find %{buildroot} -name '*.la' -print -delete
 
-%ldconfig_scriptlets
+%post -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %doc ChangeLog README.fedora
