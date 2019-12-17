@@ -41,7 +41,7 @@ libtoolize
 aclocal
 automake --add-missing
 autoreconf
-./configure --prefix=/usr --libdir=%{_libdir}/fdk-aac-freeworld --includedir=%{_includedir}/fdk-aac-freeworld --enable-shared --disable-static
+./configure --prefix=/usr --libdir=%{_libdir}/fdk-aac --includedir=%{_includedir}/fdk-aac --enable-shared --disable-static
 # make gcc5/gcc6 happy
 make 
 # CXXFLAGS='%{optflags} -std=c++11 -Wno-narrowing' V=1 %{?_smp_mflags}
@@ -53,10 +53,10 @@ make install DESTDIR=$RPM_BUILD_ROOT
 find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 
 mkdir -p %{buildroot}/usr/share/pkgconfig/
-mv -f %{buildroot}/%{_libdir}/fdk-aac-freeworld/pkgconfig %{buildroot}/usr/share/
+mv -f %{buildroot}/%{_libdir}/fdk-aac/pkgconfig %{buildroot}/usr/share/
 
-mv -f %{buildroot}/%{_includedir}/fdk-aac-freeworld/fdk-aac/*.h %{buildroot}/%{_includedir}/fdk-aac-freeworld
-rm -rf %{buildroot}/%{_includedir}/fdk-aac-freeworld/fdk-aac
+mv -f %{buildroot}/%{_includedir}/fdk-aac/fdk-aac/*.h %{buildroot}/%{_includedir}/fdk-aac
+rm -rf %{buildroot}/%{_includedir}/fdk-aac/fdk-aac
 
 
 %post -p /sbin/ldconfig
@@ -67,16 +67,15 @@ rm -rf %{buildroot}/%{_includedir}/fdk-aac-freeworld/fdk-aac
 %files
 %defattr(-,root,root,-)
 %doc ChangeLog NOTICE
-%{_libdir}/fdk-aac-freeworld/*.so.*
+%{_libdir}/fdk-aac/*.so.*
 
 %files dev
 %defattr(-,root,root,-)
 %doc documentation/*.pdf
-%dir %{_includedir}/fdk-aac-freeworld
-%{_includedir}/fdk-aac-freeworld/*.h
-%{_libdir}/fdk-aac-freeworld/*.so
-%{_datadir}/pkgconfig/%{name}.pc
-
+%dir %{_includedir}/fdk-aac
+%{_includedir}/fdk-aac/*.h
+%{_libdir}/fdk-aac/*.so
+%{_libdir}/pkgconfig/fdk-aac.pc
 
 %changelog
 
