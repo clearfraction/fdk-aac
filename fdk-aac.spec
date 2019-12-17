@@ -53,7 +53,7 @@ make install DESTDIR=$RPM_BUILD_ROOT
 find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 
 mkdir -p %{buildroot}/usr/share/pkgconfig/
-mv -f %{buildroot}/%{_libdir}/fdk-aac/pkgconfig %{buildroot}/usr/share/
+# mv -f %%{buildroot}/%%{_libdir}/fdk-aac/pkgconfig %%{buildroot}/usr/share/
 
 mv -f %{buildroot}/%{_includedir}/fdk-aac/fdk-aac/*.h %{buildroot}/%{_includedir}/fdk-aac
 rm -rf %{buildroot}/%{_includedir}/fdk-aac/fdk-aac
