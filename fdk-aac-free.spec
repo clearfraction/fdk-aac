@@ -40,7 +40,7 @@ autoreconf -vif
 
 
 %install
-%make_install INSTALL="install -p"
+%make_install INSTALL="install"
 find %{buildroot} -name '*.la' -print -delete
 
 %ldconfig_scriptlets
