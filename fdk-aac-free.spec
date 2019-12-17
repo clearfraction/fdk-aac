@@ -50,7 +50,7 @@ find %{buildroot} -name '*.la' -print -delete
 %license NOTICE
 %{_libdir}/*.so.*
 
-%files devel
+%files dev
 %doc documentation/*.pdf
 %dir %{_includedir}/fdk-aac
 %{_includedir}/fdk-aac/*.h
@@ -59,48 +59,4 @@ find %{buildroot} -name '*.la' -print -delete
 
 
 %changelog
-* Thu Jul 25 2019 Fedora Release Engineering <releng@fedoraproject.org> - 2.0.0-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
-
-* Tue Jun 25 2019 Wim Taymans <wtaymans@redhat.com> - 2.0.0-1
-- Update to 2.0.0
-
-* Thu Jan 31 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.1.6-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
-
-* Tue Sep 25 2018 Wim Taymans <wtaymans@redhat.com> - 0.1.6-1
-- Update to 0.1.6
-- Fix url
-
-* Tue Sep 25 2018 Wim Taymans <wtaymans@redhat.com> - 0.1.5-5
-- Use %ldconfig_scriptlets
-- Remove Group
-
-* Thu Nov 02 2017 Wim Taymans <wtaymans@redhat.com> - 0.1.5-4
-- Fix BuildRequires, fix libtool cleanup
-
-* Tue Oct 10 2017 Wim Taymans <wtaymans@redhat.com> - 0.1.5-3
-- Build against stripped fdk-aac library
-
-* Thu Aug 31 2017 RPM Fusion Release Engineering <kwizart@rpmfusion.org> - 0.1.5-2
-- Rebuilt for https://fedoraproject.org/wiki/Fedora_27_Mass_Rebuild
-
-* Mon Mar 20 2017 Leigh Scott <leigh123linux@googlemail.com> - 0.1.5-1
-- Update to 1.5
-
-* Wed Sep 07 2016 Nicolas Chauvet <kwizart@gmail.com> - 0.1.5-0.1.gita0bd8aa
-- Update to github snapshot
-- Spec file clean-up
-
-* Fri Nov 06 2015 Nicolas Chauvet <kwizart@gmail.com> - 0.1.4-1
-- Update to 1.4
-
-* Sun Jan 26 2014 Nicolas Chauvet <kwizart@gmail.com> - 0.1.3-1
-- Update to 1.3.0
-
-* Thu Aug 15 2013 Nicolas Chauvet <kwizart@gmail.com> - 0.1.2-1
-- Update to 0.1.2
-
-* Thu Mar 28 2013 Nicolas Chauvet <kwizart@gmail.com> - 0.1.1-1
-- Initial spec
-
+# based on https://koji.fedoraproject.org/koji/packageinfo?packageID=27608
