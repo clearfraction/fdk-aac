@@ -1,6 +1,6 @@
 Name:           fdk-aac-free
 Version:        2.0.0
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Third-Party Modified Version of the Fraunhofer FDK AAC Codec Library for Android
 
 License:        FDK-AAC
@@ -51,8 +51,8 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %make_install INSTALL="install"
 find %{buildroot} -name '*.la' -print -delete
 
-%post -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
+%post -p /usr/bin/ldconfig
+%postun -p /usr/bin/ldconfig
 
 %files
 %doc ChangeLog README.fedora
