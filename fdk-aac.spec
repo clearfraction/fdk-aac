@@ -1,6 +1,6 @@
 Name:           fdk-aac
 Version:        2.0.1
-Release:        1%{?dist}
+Release:        6%{?dist}
 Summary:        Third-Party Modified Version of the Fraunhofer FDK AAC Codec Library for Android
 
 License:        FDK-AAC
