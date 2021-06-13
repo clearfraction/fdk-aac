@@ -1,4 +1,4 @@
-%global gitdate 
+%global gitdate 2021
 %global commit 801f67f671929311e0c9952c5f92d6e147c7b003
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
