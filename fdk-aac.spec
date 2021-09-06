@@ -4,7 +4,7 @@
 
 Name:           fdk-aac
 Version:        2.0.2
-Release:        1.%{shortcommit}
+Release:        2.%{shortcommit}
 Summary:        Third-Party Modified Version of the Fraunhofer FDK AAC Codec Library for Android
 License:        FDK-AAC
 URL:            https://sourceforge.net/projects/opencore-amr
