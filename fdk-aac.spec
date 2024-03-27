@@ -3,8 +3,8 @@
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 
 Name:           fdk-aac
-Version:        2.0.2
-Release:        2.%{shortcommit}
+Version:        2.0.3
+Release:        1.%{shortcommit}
 Summary:        Third-Party Modified Version of the Fraunhofer FDK AAC Codec Library for Android
 License:        FDK-AAC
 URL:            https://sourceforge.net/projects/opencore-amr
